@@ -13,6 +13,14 @@ sasl_plain_password = os.getenv('KAFKA_PASSWORD')
 topic = os.getenv('KAFKA_TOPIC')
 url = os.getenv('URL')
 
+print("KAFKA_BOOTSTRAP_SERVER: ", bootstrap_servers)
+print("SECURITY_PROTOCOL: ", security_protocol)
+print("SASL_MECHANISM: ", sasl_mechanism)
+print("KAFKA_USERNAME: ", sasl_plain_username)
+print("KAFKA_PASSWORD: ", sasl_plain_password)
+print("KAFKA_TOPIC: ", topic)
+print("url: ", url)
+
 # Create a KafkaConsumer instance
 consumer = KafkaConsumer(
     bootstrap_servers=bootstrap_servers,
